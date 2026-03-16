@@ -1,0 +1,27 @@
+# Environment variables
+.env
+*.local
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+ENV/
+
+# Data and Persistence
+backend/data/*.json
+!backend/data/pending_selections.json # Keep template if needed, or ignore all
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo

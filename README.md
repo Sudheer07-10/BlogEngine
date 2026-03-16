@@ -42,8 +42,8 @@ Built with a sleek **GenZ aesthetic**, it features a premium glassmorphic UI, li
 
 1. **Clone the Repo**
    ```bash
-   git clone https://github.com/your-username/vertical-pulse.git
-   cd vertical-pulse
+   git clone https://github.com/your-username/BlogEngine.git
+   cd BlogEngine
    ```
 
 2. **Backend Setup**

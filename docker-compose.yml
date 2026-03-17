@@ -1,0 +1,28 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: vertical-pulse-backend
+    ports:
+      - "8060:8060"
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # CRITICAL: Change 'localhost' to your SERVER'S PUBLIC IP if accessing from outside
+        - VITE_API_URL=http://72.61.228.9:8060
+    container_name: vertical-pulse-frontend
+    ports:
+      - "8070:8070"
+    restart: unless-stopped
+    depends_on:
+      - backend
